@@ -3,19 +3,22 @@ import org.junit.Assert;
 
 import java.io.StringReader;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ParserTest extends TestCase {
     private final String separator = ",";
-    private final String metroStop1 = "1,1.3,-0.34,NY,Central Park,metro";
-    private final String metroStop2 = "2,0.2,0.57,Paris,Champs Elysée,bus";
+    private final String metroStop1 = "1,1.3,-0.34,NY,Central Park,bus";
+    private final String metroStop2 = "2,0.2,0.57,Paris,Champs Elysée,metro";
+    private final String metroStop3 = "3,1.2,1.57";
 
     public void testEmpty() {
         try {
-            // Act
-            ArrayList<MetroStop> metroStops = Parser.parse(new StringReader(""), separator);
+            // Arrange
+            StringReader stream = new StringReader("");
+            List<MetroStop> expectedMetroStops = new ArrayList<>();
 
-            // Assert
-            Assert.assertEquals(0, metroStops.size());
+            // Act & Assert
+            testMetroStop(separator, expectedMetroStops, stream);
         }
         catch (Exception e) {
             Assert.fail();
@@ -24,28 +27,41 @@ public class ParserTest extends TestCase {
 
     public void testMetroStop() {
         // Arrange
-        ArrayList<MetroStop> expectedMetroStops = new ArrayList<>();
+        StringReader stream = new StringReader(metroStop1 + System.lineSeparator() + metroStop2);
+        List<MetroStop> expectedMetroStops = new ArrayList<>();
         expectedMetroStops.add(new MetroStop(metroStop1.split(separator)));
         expectedMetroStops.add(new MetroStop(metroStop2.split(separator)));
 
         // Act & Assert
-        testMetroStop(separator, expectedMetroStops, new StringReader(metroStop1 + System.lineSeparator() + metroStop2));
+        testMetroStop(separator, expectedMetroStops, stream);
     }
 
     public void testMetroStopOtherSeparator() {
         // Arrange
-        ArrayList<MetroStop> expectedMetroStops = new ArrayList<>();
+        String hashTagSeparator = "#";
+        StringReader stream = new StringReader(metroStop1.replace(separator, hashTagSeparator) + System.lineSeparator() + metroStop2.replace(separator, hashTagSeparator));
+        List<MetroStop> expectedMetroStops = new ArrayList<>();
         expectedMetroStops.add(new MetroStop(metroStop1.split(separator)));
         expectedMetroStops.add(new MetroStop(metroStop2.split(separator)));
 
         // Act & Assert
-        testMetroStop("#", expectedMetroStops, new StringReader(metroStop1.replace(",", "#") + System.lineSeparator() + metroStop2.replace(",", "#")));
+        testMetroStop(hashTagSeparator, expectedMetroStops, stream);
     }
 
-    private void testMetroStop(String separator, ArrayList<MetroStop> expectedMetroStops, StringReader stream) {
+    public void testMetroStopTiny() {
+        // Arrange
+        StringReader stream = new StringReader(metroStop3);
+        List<MetroStop> expectedMetroStops = new ArrayList<>();
+        expectedMetroStops.add(new MetroStop(metroStop3.split(separator)));
+
+        // Act & Assert
+        testMetroStop(separator, expectedMetroStops, stream);
+    }
+
+    private void testMetroStop(String separator, List<MetroStop> expectedMetroStops, StringReader stream) {
         try {
             // Act
-            ArrayList<MetroStop> metroStops = Parser.parse(stream, separator);
+            List<MetroStop> metroStops = Parser.parse(stream, separator);
 
             // Assert
             Assert.assertEquals(expectedMetroStops.size(), metroStops.size());

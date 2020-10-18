@@ -1,3 +1,5 @@
+import java.util.Comparator;
+
 public class MetroStop {
     public int ID;
     public double longitude;
@@ -25,11 +27,24 @@ public class MetroStop {
     }
 
     public MetroStop(String[] args) {
-        this.ID = args.length > 0 ? Integer.parseInt(args[0]) : 0;
-        this.longitude = args.length > 1 ? Double.parseDouble(args[1]) : 0;
-        this.latitude = args.length > 2 ? Double.parseDouble(args[2]) : 0;
+        this.ID = args.length > 0 ? InputFormatter.stringToInt(args[0], 0) : 0;
+        this.longitude = args.length > 1 ? InputFormatter.stringToDouble(args[1], 0) : 0;
+        this.latitude = args.length > 2 ? InputFormatter.stringToDouble(args[2], 0) : 0;
         this.city = args.length > 3 ? args[3] : "";
         this.road = args.length > 4 ? args[4] : "";
         this.type = args.length > 5 ? args[5] : "";
+    }
+
+    @Override
+    public String toString() {
+        return "######################" + System.lineSeparator()
+                + "Metro Stop :" + System.lineSeparator()
+                + "ID => " + ID + System.lineSeparator()
+                + "longitude => " + longitude + System.lineSeparator()
+                + "latitude => " + latitude + System.lineSeparator()
+                + "city => " + city + System.lineSeparator()
+                + "road => " + road + System.lineSeparator()
+                + "type => " + type + System.lineSeparator()
+                + "######################";
     }
 }

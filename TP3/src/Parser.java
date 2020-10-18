@@ -1,10 +1,12 @@
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Parser {
-    public static ArrayList<MetroStop> parse(Reader reader, String separator) throws Exception {
-        ArrayList<MetroStop> metroStops = new ArrayList<>();
+    public static List<MetroStop> parse(Reader reader, String separator) throws IOException {
+        List<MetroStop> metroStops = new ArrayList<>();
         BufferedReader br = new BufferedReader(reader);
         String line;
 

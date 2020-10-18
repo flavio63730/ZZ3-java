@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SorterTest extends TestCase {
-    private final MetroStop metroStop1 = new MetroStop(1, 1.3, -0.34, "NY", "Times square", "metro");
-    private final MetroStop metroStop2 = new MetroStop(2, 0.2, 0.57, "Paris", "Champs Elysée", "bus");
-    private final MetroStop metroStop3 = new MetroStop(3, 1.2, 1.57, "Londres", "Madison Square Garden", "bus");
+    private final MetroStop metroStop1 = new MetroStop(1, 1.3, -0.34, "NY", "Times square", "bus");
+    private final MetroStop metroStop2 = new MetroStop(2, 0.2, 0.57, "Paris", "Champs Elysée", "metro");
+    private final MetroStop metroStop3 = new MetroStop(3, 1.2, 1.57, "", "", "");
 
     public void testSortMetroStop() {
         // Assert
@@ -15,7 +15,7 @@ public class SorterTest extends TestCase {
 
         // Act
         List<MetroStop> metroStops = Arrays.asList(metroStop3, metroStop1, metroStop2);
-        Sorter.sortMetroStop(metroStops);
+        Sorter.sortMetroStopByID(metroStops);
 
         // Assert
         testSortMetroStop(expectedMetroStops, metroStops);
@@ -23,23 +23,25 @@ public class SorterTest extends TestCase {
 
     public void testSortMetroStopRoad() {
         // Assert
-        List<MetroStop> expectedMetroStops = Arrays.asList(metroStop2, metroStop3, metroStop1);
+        List<MetroStop> expectedMetroStops = Arrays.asList(metroStop3, metroStop2, metroStop1);
 
         // Act
-        List<MetroStop> metroStops = Arrays.asList(metroStop1, metroStop2, metroStop3);
-        Sorter.sortMetroStopRoad(metroStops);
+        List<MetroStop> metroStops = Arrays.asList(metroStop1, metroStop3, metroStop2);
+        Sorter.sortMetroStopByRoad(metroStops);
 
+        // Assert
         testSortMetroStop(expectedMetroStops, metroStops);
     }
 
     public void testSortMetroStopCity() {
-        // Assert
+        // Arrange
         List<MetroStop> expectedMetroStops = Arrays.asList(metroStop3, metroStop1, metroStop2);
 
         // Act
         List<MetroStop> metroStops = Arrays.asList(metroStop1, metroStop2, metroStop3);
-        Sorter.sortMetroStopCity(metroStops);
+        Sorter.sortMetroStopByCity(metroStops);
 
+        // Assert
         testSortMetroStop(expectedMetroStops, metroStops);
     }
 

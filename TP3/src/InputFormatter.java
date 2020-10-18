@@ -16,7 +16,7 @@ public class InputFormatter {
                 value = Integer.parseInt(scanner.nextLine());
             }
             catch (NumberFormatException e) {
-                displayError(e);
+                Exceptions.displayError(e);
             }
         }
         return value;
@@ -30,7 +30,7 @@ public class InputFormatter {
                 value = Float.parseFloat(scanner.nextLine());
             }
             catch (NumberFormatException e) {
-                displayError(e);
+                Exceptions.displayError(e);
             }
         }
         return value;
@@ -44,18 +44,31 @@ public class InputFormatter {
                 value = LocalDate.parse(scanner.nextLine());
             }
             catch (DateTimeParseException e) {
-                displayError(e);
+                Exceptions.displayError(e);
             }
         }
         return value;
     }
 
-    private static void displayError(Exception e) {
-        System.out.println();
-        System.out.println("**********************");
-        System.out.println("ERROR : NumberFormatException" + e.getClass());
-        System.out.println("ERROR MESSAGE : " + e.getMessage());
-        System.out.println("**********************");
-        System.out.println();
+    public static int stringToInt(String text, int defaultValue) {
+        try {
+            return Integer.parseInt(text);
+        }
+        catch (NumberFormatException e) {
+            Exceptions.displayError(e);
+        }
+
+        return defaultValue;
+    }
+
+    public static double stringToDouble(String text, double defaultValue) {
+        try {
+            return Double.parseDouble(text);
+        }
+        catch (NumberFormatException e) {
+            Exceptions.displayError(e);
+        }
+
+        return defaultValue;
     }
 }
