@@ -1,5 +1,3 @@
-import java.util.Comparator;
-
 public class MetroStop {
     public int ID;
     public double longitude;

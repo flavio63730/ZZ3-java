@@ -8,12 +8,12 @@ public class Main {
     private static final Scanner scanner = new Scanner( System.in );
     private static final List<Integer> menuOptions = Arrays.asList(1, 2, 3, 4, 5, 9);
     private static final String menuOptionsText = "1) Afficher" + System.lineSeparator()
-            + "2) Importer un fichier" + System.lineSeparator()
-            + "3) Trier par ID" + System.lineSeparator()
-            + "4) Trier par Rue" + System.lineSeparator()
-            + "5) Trier par Ville" + System.lineSeparator()
-            + "9) Quitter" + System.lineSeparator()
-            + "Votre choix : ";
+                                                + "2) Importer un fichier" + System.lineSeparator()
+                                                + "3) Trier par ID" + System.lineSeparator()
+                                                + "4) Trier par Rue" + System.lineSeparator()
+                                                + "5) Trier par Ville" + System.lineSeparator()
+                                                + "9) Quitter" + System.lineSeparator()
+                                                + "Votre choix : ";
 
     public static void main(String[] args) {
         int choice;
