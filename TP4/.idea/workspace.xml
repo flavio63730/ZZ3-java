@@ -41,7 +41,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in TP4">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="TP4" />
@@ -74,9 +74,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in TP4" />
-        <item itemvalue="JUnit.WeatherAPITest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.WeatherAPITest" />
+        <item itemvalue="JUnit.All in TP4" />
       </list>
     </recent_temporary>
   </component>
@@ -115,26 +115,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="285" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604238711422" />
-    <state x="324" y="279" key="FileChooserDialogImpl" timestamp="1604239137495">
+    <state x="324" y="279" key="FileChooserDialogImpl" timestamp="1604387437103">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="324" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604239137495" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1604241189037">
+    <state x="324" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604387437103" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1604350794863">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604241189037" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1604241189037">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604350794863" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1604350794863">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604241189037" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1604241189037">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604350794863" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1604350794863">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604241189037" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1604241189037">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604350794863" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1604350794863">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604241189037" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604350794863" />
     <state width="914" height="139" key="GridCell.Tab.1.bottom" timestamp="1603180258779">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -151,10 +151,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="914" height="139" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603180258779" />
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1604238062008">
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1604387351959">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604238062008" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604387351959" />
     <state x="664" y="414" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1604239966487">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -163,6 +163,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="731" y="224" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604239958168" />
+    <state x="342" y="141" key="new project wizard" timestamp="1604387457755">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="141" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1604387457755" />
     <state x="136" y="244" key="run.anything.popup" timestamp="1603179621586">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
