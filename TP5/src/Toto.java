@@ -1,4 +1,4 @@
-public class Toto extends Mom implements IToto {
+public class Toto {
     private String stringPrivate;
     protected int intProtected;
     public double doublePublic;
