@@ -1,14 +1,12 @@
 JAVACLASS = Toto
 CPPCLASS = Tata
-
-display:
-	echo @1
+OUT = ""
 
 make-java: 
-	javac -d bin -sourcepath src src/*.java 2> /tmp/TP5.txt
+	javac -d bin -sourcepath src src/*.java
 
 run-java: make-java
-	java -classpath bin Main $(JAVACLASS) $(CPPCLASS) 2> /tmp/TP5.txt
+	java -classpath bin Main $(JAVACLASS) $(CPPCLASS) $(OUT)
 
 make-cpp: run-java
 	g++ cpp/$(CPPCLASS).hpp -o cpp/$(CPPCLASS).o
