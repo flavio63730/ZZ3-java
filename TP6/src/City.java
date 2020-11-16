@@ -53,9 +53,8 @@ public class City implements Serializable {
         return main.humidity;
     }
 
-    public void display(String separator) {
-        System.out.println(separator);
-        System.out.println(toString());
+    public String display(String separator) {
+        return separator + System.lineSeparator() + toString();
     }
 
     @Override
