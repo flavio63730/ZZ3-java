@@ -1,7 +1,7 @@
 import com.github.javafaker.Faker;
 
+import java.util.Collection;
 import java.util.Locale;
-import java.util.List;
 import java.util.LinkedList;
 
 public class Generator {
@@ -16,8 +16,8 @@ public class Generator {
                             faker.lorem().paragraph());
     }
 
-    public static List<Etudiant> etudiants(int limit) {
-        List<Etudiant> etudiants = new LinkedList<>();
+    public static Collection<Etudiant> etudiants(int limit) {
+        Collection<Etudiant> etudiants = new LinkedList<>();
 
         for (int i=0; i < limit; ++i) {
             etudiants.add(etudiant());

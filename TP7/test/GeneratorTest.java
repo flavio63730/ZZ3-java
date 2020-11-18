@@ -1,7 +1,7 @@
 import junit.framework.TestCase;
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.List;
+import java.util.Collection;
 
 public class GeneratorTest extends TestCase {
     private static void assertEtudiant(Etudiant etudiant) {
@@ -26,12 +26,12 @@ public class GeneratorTest extends TestCase {
         int limit = 10;
 
         // Act
-        List<Etudiant> etudiants = Generator.etudiants(limit);
+        Collection<Etudiant> etudiants = Generator.etudiants(limit);
 
         // Assert
         assertEquals(limit, etudiants.size());
-        for (int i=0; i < limit; ++i) {
-            assertEtudiant(etudiants.get(i));
+        for (Etudiant etudiant : etudiants) {
+            assertEtudiant(etudiant);
         }
     }
 }

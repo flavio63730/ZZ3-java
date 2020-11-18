@@ -1,12 +1,14 @@
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class ThreadGenerator {
     private static class SingleThreadGenerator implements Runnable {
         private int limit;
-        private List<Etudiant> etudiants;
+        private Collection<Etudiant> etudiants;
 
-        public SingleThreadGenerator(int limit, List<Etudiant> etudiants) {
+        public SingleThreadGenerator(int limit, Collection<Etudiant> etudiants) {
             this.limit = limit;
             this.etudiants = etudiants;
         }
@@ -17,8 +19,8 @@ public class ThreadGenerator {
         }
     }
 
-    public static List<Etudiant> etudiants(int cores, int limit) throws InterruptedException {
-        List<Etudiant> etudiants = new LinkedList<>();
+    public static Collection<Etudiant> etudiants(int cores, int limit) throws InterruptedException {
+        Collection<Etudiant> etudiants = new ConcurrentLinkedQueue<>();
         List<Thread> threads = new LinkedList<>();
 
         // Create all threads with optimal number of students per thread
@@ -26,7 +28,7 @@ public class ThreadGenerator {
             threads.add(new Thread(new SingleThreadGenerator((limit / cores) + (limit % cores > i ? 1 : 0), etudiants)));
         }
 
-        // Start all thrads
+        // Start all threads
         for (Thread thread : threads) {
             thread.start();
         }

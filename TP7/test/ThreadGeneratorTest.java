@@ -1,7 +1,8 @@
 import junit.framework.TestCase;
 import org.apache.commons.lang3.StringUtils;
+import org.junit.Assert;
 
-import java.util.List;
+import java.util.Collection;
 
 public class ThreadGeneratorTest extends TestCase {
     private static void assertEtudiant(Etudiant etudiant) {
@@ -16,15 +17,38 @@ public class ThreadGeneratorTest extends TestCase {
     private static void assertEtudiants(int cores, int limit) {
         try {
             // Act
-            List<Etudiant> etudiants = ThreadGenerator.etudiants(cores, limit);
+            Collection<Etudiant> etudiants = ThreadGenerator.etudiants(cores, limit);
 
             // Assert
             assertEquals(limit, etudiants.size());
-            for (int i=0; i < limit; ++i) {
-                assertEtudiant(etudiants.get(i));
+            for (Etudiant etudiant : etudiants) {
+                assertEtudiant(etudiant);
             }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            Assert.fail();
+        }
+    }
+
+    private static void assertEtudiantsDb(int cores, int limit) {
+        try {
+            // Arrange
+            SQLManager sqlManager = new SQLManager("jdbc:sqlite:db/TP7_test.db");
+            sqlManager.deleteAll();
+
+            // Act
+            Collection<Etudiant> etudiants = ThreadGenerator.etudiants(cores, limit);
+            sqlManager.insertAll(etudiants);
+
+            // Assert
+            assertEquals(limit, etudiants.size());
+            assertEquals(limit, sqlManager.selectAll().size());
+            for (Etudiant etudiant : etudiants) {
+                assertEtudiant(etudiant);
+            }
+
+            sqlManager.dispose();
+        } catch (Exception e) {
+            Assert.fail();
         }
     }
 
@@ -38,5 +62,17 @@ public class ThreadGeneratorTest extends TestCase {
 
     public void testEtudiantsWithNoMultiplableLimit() {
         assertEtudiants(4, 9);
+    }
+
+    public void testEtudiantsSimpleCoresDb() {
+        assertEtudiantsDb(1, 8);
+    }
+
+    public void testEtudiantsMultipleCoresDb() {
+        assertEtudiantsDb(4, 8);
+    }
+
+    public void testEtudiantsWithNoMultiplableLimitDb() {
+        assertEtudiantsDb(4, 9);
     }
 }
