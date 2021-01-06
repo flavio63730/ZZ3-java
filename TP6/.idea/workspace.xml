@@ -15,6 +15,13 @@
       </list>
     </option>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1k5YKLr2zB6uvE6HQMOJcmdEgRs" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -30,11 +37,11 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TP7" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.38186812" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -85,8 +92,8 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.SQLManagerTest" />
-      <item itemvalue="JUnit.SQLManagerTest.testSelectAll" />
       <item itemvalue="JUnit.SQLManagerTest.testSelectAllSortByName" />
+      <item itemvalue="JUnit.SQLManagerTest.testSelectAll" />
     </list>
     <recent_temporary>
       <list>
@@ -120,10 +127,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="612" y="183" width="874" height="681" key="#Project_Structure" timestamp="1605711256631">
+    <state x="612" y="183" width="874" height="681" key="#Project_Structure" timestamp="1606901295125">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="612" y="183" width="874" height="681" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1605711256631" />
+    <state x="612" y="183" width="874" height="681" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1606901295125" />
     <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605563925556">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -136,10 +143,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604995510110" />
-    <state x="186" y="266" key="FileChooserDialogImpl" timestamp="1604994417040">
+    <state x="865" y="218" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1606901244297">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="186" y="266" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604994417040" />
+    <state x="865" y="218" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606901244297" />
+    <state x="186" y="266" key="FileChooserDialogImpl" timestamp="1606905007764">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="186" y="266" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606905007764" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1605564423005">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -172,14 +183,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605564423005" />
-    <state x="461" y="163" key="SettingsEditor" timestamp="1605561177456">
+    <state x="137" y="110" key="SettingsEditor" timestamp="1606902544914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605561177456" />
-    <state x="1136" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1605599679987">
+    <state x="137" y="110" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606902544914" />
+    <state x="296" y="302" key="chooseDestDirectoryDialog" timestamp="1606904764579">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1136" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605599679987" />
+    <state x="296" y="302" key="chooseDestDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606904764579" />
+    <state x="1136" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1606901777551">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1136" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606901777551" />
     <state x="184" y="418" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1605560800746">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

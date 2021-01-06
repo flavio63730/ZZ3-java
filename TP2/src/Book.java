@@ -2,7 +2,12 @@ import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Book {
-    public String title;
+    private String title;
+
+    public string getTitle() {
+        return title;
+    }
+
     public float price;
     public LocalDate releaseDate;
     public String category;

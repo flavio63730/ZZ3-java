@@ -12,7 +12,7 @@ public class Main {
         try {
             city = WeatherAPI.connect(args[0]);
         } catch (IOException e) {
-            System.err.println(e.getMessage());
+            System.err.println("Error");
         }
 
         System.out.println(city);

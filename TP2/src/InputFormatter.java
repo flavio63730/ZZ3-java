@@ -3,12 +3,7 @@ import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
 public class InputFormatter {
-    public static String getInputString(Scanner scanner, String text) {
-        System.out.print(text);
-        return scanner.nextLine();
-    }
-
-    public static int getInputPositiveInt(Scanner scanner, String text) {
+    public final int getInputPositiveInt(Scanner scanner, String text) {
         int value = -1;
         while (value < 0) {
             try {
